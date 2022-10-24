@@ -6,6 +6,7 @@ import slackIcon from './assets/slack.svg'
 import githubIcon from './assets/github.svg'
 import zuriLogo from './assets/zuri.svg'
 import i4gLogo from './assets/I4G.png'
+import cameraIcon from './assets/cameraIcon.svg'
 
 function App() {
 
@@ -28,6 +29,9 @@ function App() {
       <header className="profile">
         <div className="profile__img__container">
           <img className="profile__img" src={profileImg} alt="profile picture" />
+          <div className="profile__img__edit__container">
+            <img src={cameraIcon} alt="profile image edit icon" className="profile__img__camera" />
+          </div>
         </div>
         <div className="twitter">Tochibedford</div>
         <div className="slack" hidden>tochi bedford</div>
