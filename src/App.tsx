@@ -2,6 +2,8 @@ import './App.scss'
 import profileImg from './assets/profile__img.png'
 import shareIcon from './assets/shareIcon.svg'
 import menuIcon from './assets/menuIcon.svg'
+import slackIcon from './assets/slack.svg'
+import githubIcon from './assets/github.svg'
 
 function App() {
 
@@ -38,6 +40,14 @@ function App() {
         {userLinks.map((link, index)=>{
           return <a key={`${link.id + index}`} id={link.id} className="link__button" href={link.url}>{link.text}</a>
         })}
+        <div className="social__links">
+          <div className="social__icon__container">
+            <img src={slackIcon} alt="slack icon" className="social__icon" />
+          </div>
+          <div className="social__icon__container">
+            <img src={githubIcon} alt="github icon" className="social__icon" />
+          </div>
+        </div>
       </main>
     </div>
   )
