@@ -44,12 +44,37 @@ $gray-300: #D0D5DD;
             place-items: center;
             cursor: pointer;
         }
+
+        .menu__icon__container {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px $gray-300 dashed;
+            display: none;
+            place-items: center;
+            cursor: pointer;
+        }
     }
 }
 
 
-@media only screen and (max-width: 600px) {
-    .profile {
-        min-width: 100%;
+@media screen and (max-width: 600px) {
+    .App{
+        .profile {
+            min-width: 100%;
+    
+            .share__icon__container {
+                display: none;
+            }
+    
+            .menu__icon__container {
+                display: grid;
+            }
+        }
     }
+
+
 }
