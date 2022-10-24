@@ -27,9 +27,9 @@ function App() {
   return (
     <div className="App">
       <header className="profile">
-        <div className="profile__img__container">
+        <div className="profile__img__container" tabIndex={0}>
           <img className="profile__img" src={profileImg} alt="profile picture" />
-          <div className="profile__img__edit__container">
+          <div className="profile__img__edit__container" tabIndex={0}>
             <img src={cameraIcon} alt="profile image edit icon" className="profile__img__camera" />
           </div>
         </div>
