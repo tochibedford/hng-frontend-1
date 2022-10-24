@@ -13,16 +13,17 @@ function App() {
   type TuserLinks = {
     id: string,
     url: string,
-    text: string
+    text: string,
+    disabled: boolean
   }[]
 
   // using an array to hold links will make it easier to change things or replace with an api Call in the future
   const userLinks: TuserLinks = [
-    {id: "btn", url: "https://training.zuri.team/", text: "Zuri Team"},
-    {id: "books", url: "https://training.zuri.team/", text: "Zuri Books"},
-    {id: "book__python", url: "https://books.zuri.team/python-for-beginners?ref_id=tochibedford", text: "Python Books"},
-    {id: "pitch", url: "https://background.zuri.team", text: "Background Check for Coders"},
-    {id: "book__design", url: "https://background.zuri.team", text: "Design Books"},
+    {id: "btn", url: "https://training.zuri.team/", text: "Zuri Team", disabled: false},
+    {id: "books", url: "https://training.zuri.team/", text: "Zuri Books", disabled: false},
+    {id: "book__python", url: "https://books.zuri.team/python-for-beginners?ref_id=tochibedford", text: "Python Books", disabled: false},
+    {id: "pitch", url: "https://background.zuri.team", text: "Background Check for Coders", disabled: false},
+    {id: "book__design", url: "https://background.zuri.team", text: "Design Books", disabled: false},
   ]
   return (
     <div className="App">
@@ -34,25 +35,27 @@ function App() {
           </div>
         </div>
         <div className="twitter">Tochibedford</div>
-        <div className="slack" hidden>tochi bedford</div>
-        <div className="share__icon__container">
+        <div className="slack" hidden>
+          Member ID: U047A1VMLUF
+        </div>
+        <div className="share__icon__container" tabIndex={0}>
           <img src={shareIcon} alt="share button" className="share__icon" />
         </div>
-        <div className="menu__icon__container">
+        <div className="menu__icon__container" tabIndex={0}>
           <img src={menuIcon} alt="menu button" className="menu__icon" />
         </div>
       </header>
       <main className="links">
         {userLinks.map((link, index)=>{
-          return <a key={`${link.id + index}`} id={link.id} className="link__button" href={link.url}>{link.text}</a>
+          return <a key={`${link.id + index}`} id={link.id} className="link__button" href={link.url} >{link.text}</a>
         })}
         <div className="social__links">
-          <div className="social__icon__container">
+          <a className="social__icon__container" href="https://tochibedford.slack.com">
             <img src={slackIcon} alt="slack icon" className="social__icon" />
-          </div>
-          <div className="social__icon__container">
+          </a>
+          <a className="social__icon__container" href="https://github.com/tochibedford">
             <img src={githubIcon} alt="github icon" className="social__icon" />
-          </div>
+          </a>
         </div>
       </main>
       <footer className="footer__info">
