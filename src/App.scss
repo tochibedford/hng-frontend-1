@@ -1,8 +1,11 @@
+$gray-200: #EAECF0;
 $gray-300: #D0D5DD;
+$gray-900: #101828;
 
 .App {
     width: 100vw;
-    padding: 5vh 4vw;
+    min-height: 100vh;
+    padding: 5vh 10vw 0 10vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,6 +14,8 @@ $gray-300: #D0D5DD;
         width: 700px;
         max-width: 100%;
         position: relative;
+        margin-bottom: 56px;
+        color: $gray-900;
 
         .profile__img__container {
             height: 88px;
@@ -56,6 +61,29 @@ $gray-300: #D0D5DD;
             display: none;
             place-items: center;
             cursor: pointer;
+        }
+    }
+
+    .links {
+        // background-color: red;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 24px;
+        
+        .link__button {
+            text-decoration: none;
+            background-color: $gray-200;
+            color: $gray-900;
+            height: 76px;
+            width: 100%;
+            display: grid;
+            border-radius: 8px;
+            place-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: clamp(13px, 3vw, 18px);
+            font-weight: 600;
         }
     }
 }
