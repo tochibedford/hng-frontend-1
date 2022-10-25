@@ -1,4 +1,4 @@
-# HNG Frontend Task 1
+# HNG Frontend Task 1 - Tochi Bedford
 
 ## Bootstrapping
 
