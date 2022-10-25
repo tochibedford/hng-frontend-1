@@ -19,23 +19,23 @@ function App() {
 
   // using an array to hold links will make it easier to change things or replace with an api Call in the future
   const userLinks: TuserLinks = [
-    {id: "btn", url: "https://training.zuri.team/", text: "Zuri Team", disabled: false},
-    {id: "books", url: "https://training.zuri.team/", text: "Zuri Books", disabled: false},
+    {id: "btn__zuri", url: "https://training.zuri.team/", text: "Zuri Team", disabled: false},
+    {id: "books", url: "https://books.zuri.team/", text: "Zuri Books", disabled: false},
     {id: "book__python", url: "https://books.zuri.team/python-for-beginners?ref_id=tochibedford", text: "Python Books", disabled: false},
     {id: "pitch", url: "https://background.zuri.team", text: "Background Check for Coders", disabled: false},
-    {id: "book__design", url: "https://background.zuri.team", text: "Design Books", disabled: false},
+    {id: "book__design", url: "https://books.zuri.team/design-rules", text: "Design Books", disabled: false},
   ]
   return (
     <div className="App">
-      <header className="profile">
+      <header role="heading" className="profile">
         <div className="profile__img__container" tabIndex={0}>
-          <img className="profile__img" src={profileImg} alt="profile picture" />
+          <img id="profile__img" src={profileImg} alt="profile picture" />
           <div className="profile__img__edit__container" tabIndex={0}>
             <img src={cameraIcon} alt="profile image edit icon" className="profile__img__camera" />
           </div>
         </div>
-        <div className="twitter">Tochibedford</div>
-        <div className="slack" hidden>
+        <div id="twitter">Tochibedford</div>
+        <div id="slack" hidden>
           Member ID: U047A1VMLUF
         </div>
         <div className="share__icon__container" tabIndex={0}>
