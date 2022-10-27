@@ -36,7 +36,8 @@ function App() {
         </div>
         <div id="twitter">Tochibedford</div>
         <div id="slack" hidden>
-          Member ID: U047A1VMLUF
+          Member ID: U0488QM0BUL
+          Display Name: tochibedford
         </div>
         <div className="share__icon__container" tabIndex={0}>
           <img src={shareIcon} alt="share button" className="share__icon" />
@@ -50,7 +51,7 @@ function App() {
           return <a key={`${link.id + index}`} id={link.id} className="link__button" href={link.url} >{link.text}</a>
         })}
         <div className="social__links">
-          <a className="social__icon__container" href="https://tochibedford.slack.com">
+          <a className="social__icon__container" href="https://app.slack.com/client/T042F7V19Q8/D0483CKLBHB/rimeto_profile/U0488QM0BUL">
             <img src={slackIcon} alt="slack icon" className="social__icon" />
           </a>
           <a className="social__icon__container" href="https://github.com/tochibedford">
