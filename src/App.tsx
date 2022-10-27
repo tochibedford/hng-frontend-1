@@ -54,7 +54,7 @@ function App() {
           <a className="social__icon__container" href="https://app.slack.com/client/T042F7V19Q8/D0483CKLBHB/rimeto_profile/U0488QM0BUL">
             <img src={slackIcon} alt="slack icon" className="social__icon" />
           </a>
-          <a className="social__icon__container" href="https://github.com/tochibedford">
+          <a className="social__icon__container" href="https://github.com/tochibedford/hng-frontend-1">
             <img src={githubIcon} alt="github icon" className="social__icon" />
           </a>
         </div>
