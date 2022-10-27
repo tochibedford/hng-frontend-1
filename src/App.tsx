@@ -14,9 +14,8 @@ function App() {
 
   useEffect(()=>{
     //change profile image on file select
-    const inputElement = profileRef.current?.querySelector("#inputImage") as HTMLInputElement
     const handleClick = ()=>{
-      inputElement?.click()
+      (profileRef.current?.querySelector("#inputImage") as HTMLInputElement)?.click()
     }
     const handleChange = (event: Event)=>{
       const reader  = new FileReader()
