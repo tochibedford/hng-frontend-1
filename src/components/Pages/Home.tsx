@@ -40,6 +40,7 @@ export default function Home() {
 
     // using an array to hold links will make it easier to change things or replace with an api Call in the future
     const userLinks: TuserLinks = [
+        { id: "btn__twitter", url: "https://twitter.com/tochibedford", text: "Twitter Link", disabled: false },
         { id: "btn__zuri", url: "https://training.zuri.team/", text: "Zuri Team", disabled: false },
         { id: "books", url: "https://books.zuri.team/", text: "Zuri Books", disabled: false },
         { id: "book__python", url: "https://books.zuri.team/python-for-beginners?ref_id=tochibedford", text: "Python Books", disabled: false },
@@ -72,7 +73,7 @@ export default function Home() {
                 {userLinks.map((link, index) => {
                     return <a key={`${link.id + index}`} id={link.id} className="link__button" href={link.url} >{link.text}</a>
                 })}
-                <Link className="link__button" to="/contact" >Contact Me</Link>
+                <Link className="link__button" to="/contact" >Contact Me</Link> {/* needs to be separate from the lists of links since it is an internal page */}
                 <div className="social__links">
                     <a className="social__icon__container" href="https://app.slack.com/client/T042F7V19Q8/D0483CKLBHB/rimeto_profile/U0488QM0BUL">
                         <img src={slackIcon} alt="slack icon" className="social__icon" />
