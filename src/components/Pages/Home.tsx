@@ -71,7 +71,7 @@ export default function Home() {
             </header>
             <main className="links">
                 {userLinks.map((link, index) => {
-                    return <a key={`${link.id + index}`} id={link.id} className="link__button" href={link.url} >{link.text}</a>
+                    return <a key={`${link.id + index}`} id={link.id} className="link__button" href={link.url} target="_blank">{link.text}</a>
                 })}
                 <Link className="link__button" to="/contact" >Contact Me</Link> {/* needs to be separate from the lists of links since it is an internal page */}
                 <div className="social__links">
