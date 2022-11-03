@@ -240,15 +240,23 @@ $link-shadow: rgba(16, 24, 40, 0.05);
             text-align: center;
         }
     }
-
+    
 }
 
 @media screen and (max-width: 700px) {
-    .footer__info {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1.8em;
+    .App{
+        .footer__info {
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 1.8em;
+            
+            .footer__text {
+                display: inline;
+                width: 100%;
+                text-align: left;
+            }
+        }
     }
 }
 @media screen and (max-width: 600px) {
