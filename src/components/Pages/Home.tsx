@@ -6,7 +6,7 @@ import githubIcon from '../../assets/github.svg'
 import cameraIcon from '../../assets/cameraIcon.svg'
 
 import { useEffect, useRef } from 'react'
-
+import {Link} from 'react-router-dom'
 export default function Home() {
     const profileRef = useRef<HTMLDivElement>(null)
 
@@ -72,6 +72,7 @@ export default function Home() {
                 {userLinks.map((link, index) => {
                     return <a key={`${link.id + index}`} id={link.id} className="link__button" href={link.url} >{link.text}</a>
                 })}
+                <Link className="link__button" to="/contact" >Contact Me</Link>
                 <div className="social__links">
                     <a className="social__icon__container" href="https://app.slack.com/client/T042F7V19Q8/D0483CKLBHB/rimeto_profile/U0488QM0BUL">
                         <img src={slackIcon} alt="slack icon" className="social__icon" />
