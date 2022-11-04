@@ -64,9 +64,9 @@ export default function Home() {
             </header>
             <main className="links">
                 {userLinks.map((link, index) => {
-                    return <a key={`${link.id + index}`} id={link.id} className="link__button" href={link.url} target="_blank">{link.text}</a>
+                    return <a key={`${link.id + index}`} role="button" id={link.id} className="link__button" href={link.url} target="_blank">{link.text}</a>
                 })}
-                <Link id="contact" className="link__button" to="/contact" >Contact Me</Link> {/* needs to be separate from the lists of links since it is an internal page */}
+                <Link id="contact" role="button" className="link__button" to="/contact" >Contact Me</Link> {/* needs to be separate from the lists of links since it is an internal page */}
                 <div className="social__links">
                     <a className="social__icon__container" href="https://app.slack.com/client/T042F7V19Q8/D0483CKLBHB/rimeto_profile/U0488QM0BUL">
                         <img src={slackIcon} alt="slack icon" className="social__icon" />
