@@ -62,7 +62,7 @@ export default function Home() {
                     <img src={menuIcon} alt="menu button" className="menu__icon" />
                 </div>
             </header>
-            <main className="links">
+            <main className="links" role="main">
                 {userLinks.map((link, index) => {
                     return <a key={`${link.id + index}`} role="button" id={link.id} className="link__button" href={link.url} target="_blank">{link.text}</a>
                 })}
