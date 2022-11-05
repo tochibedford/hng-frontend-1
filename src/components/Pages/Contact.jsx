@@ -2,12 +2,16 @@ import { useState } from 'react'
 import styles from '../../styles/Contact.module.scss'
 
 export default function Contact() {
-    const [formInputs, setFormInputs] = useState({
+    const formDefaults = {
         first_name: '',
         last_name: '',
         email: '',
         message: '',
         privacy_agreement: false
+    }
+
+    const [formInputs, setFormInputs] = useState({
+        ...formDefaults
     })
 
     const handleInputChange = (event) => {
@@ -27,7 +31,18 @@ export default function Contact() {
         const target = event.target
         target.classList.add(styles.visited)
     }
-    
+
+    const handleSubmit = (e)=>{ // till a decision is made on what to on with form submission, this manually resets the form state
+        e.preventDefault()
+        document.querySelector("#first_name").classList.remove(styles.visited)
+        document.querySelector("#last_name").classList.remove(styles.visited)
+        document.querySelector("#email").classList.remove(styles.visited)
+        document.querySelector("#message").classList.remove(styles.visited)
+        setFormInputs(prevState=>{
+            return formDefaults
+        })
+    }
+
     return (
         <>
             <header role="heading" className={styles.page__title__container}>
@@ -35,7 +50,7 @@ export default function Contact() {
                 <h2 className={styles.page__subtitle}>Hi there, contact me to ask me about anything you have in mind.</h2>
             </header>
             <main role="main" className={styles.contact__form__container}>
-                <form action="" className={styles.contact__form}>
+                <form className={styles.contact__form} action="/" onSubmit={handleSubmit} >
                     <div className={styles.form__name}>
                         <label htmlFor="first_name" className={styles.input__tip}>
                             First name
