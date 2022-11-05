@@ -1,0 +1,146 @@
+@import "./colors.scss";
+
+.page__title__container {
+    margin-top: clamp(10px, 4vw, 200px);
+    margin-bottom: 4em;
+    width: 60%;
+
+    .page__title {
+        font-size: 3.6em;
+        font-weight: 600;
+        margin-bottom: 0.3em;
+    }
+
+    .page__subtitle {
+        font-size: 2em;
+        font-weight: 400;
+        color: #475467;
+    }
+}
+
+.contact__form__container {
+    width: 60%;
+    font-size: 1.4em;
+    line-height: 2em;
+
+    .contact__form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .error__tip {
+            display: none;
+            color: #F83F23;
+        }
+
+        .form__name {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10%;
+
+            label[for=first_name] {
+                margin-bottom: 1em;
+            }
+
+            label {
+                flex: 1 1 45%;
+            }
+        }
+
+        label[for=privacy_agreement] {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5px;
+
+            input[type=checkbox] {
+                width: 20px;
+                height: 15px;
+                border-radius: 6px;
+                accent-color: $primary-600;
+                background-color: white;
+                border: 10px solid $primary-200;
+            }
+        }
+
+        label {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            color: #344054;
+            position: relative;
+
+            input {
+                border-radius: 8px;
+                height: 44px;
+                padding: 0 1em;
+                font-size: 16px;
+                border: 1px solid $gray-300;
+
+                &:focus {
+                    outline: none;
+                    border: 4px solid $primary-300;
+                }
+            }
+
+            .visited {
+                &:invalid {
+                    border: 2px solid #F89687;
+
+                    +.error__tip {
+                        display: inline;
+                    }
+                }
+            }
+
+            textarea {
+                font-family: "Inter", sans-serif;
+                border-radius: 8px;
+                padding: 1em;
+                font-size: 16px;
+                border: 1px solid $gray-300;
+                resize: none;
+
+                &:focus {
+                    outline: none;
+                    border: 4px solid $primary-300;
+                }
+            }
+
+        }
+
+        .btn__submit {
+            border: none;
+            border-radius: 8px;
+            color: white;
+            background-color: $primary-600;
+            height: 44px;
+            font-size: 16px;
+            font-weight: 600;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $primary-700;
+            }
+
+            &:focus {
+                outline: 4px solid $primary-200;
+            }
+
+            &[disabled] {
+                background-color: $primary-200;
+                cursor: auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .page__title__container {
+        width: 100%;
+    }
+
+    .contact__form__container {
+        width: 100%;
+    }
+}

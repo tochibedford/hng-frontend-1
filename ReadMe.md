@@ -22,6 +22,12 @@ npm test
 
 I have followed as many semantic Html rules as possible for the task. as well as making sure different sections were Tab-Accessible
 
+## Conventions
+
+Class names should be snake__case with double under scores
+There is a Component for each logical "page" in the `./src/components/Pages` folder
+Every other page will be styled with css modules besides the `Home` Page
+
 ## Deployment
 
 I have deployed the live site to [https://hng-frontend-1.vercel.app/](https://hng-frontend-1.vercel.app/)

@@ -1,11 +1,6 @@
+@import "./styles/colors.scss";
+
 $disabled-link: #FCFCFD;
-$gray-50: #F9FAFB;
-$gray-100: #F2F4F7;
-$gray-200: #EAECF0;
-$gray-300: #D0D5DD;
-$gray-400: #98A2B3;
-$gray-500: #667085;
-$gray-900: #101828;
 $image-hover: #344054b4;
 $image-focus: #EBE9FE;
 $link-shadow: rgba(16, 24, 40, 0.05);
@@ -240,15 +235,23 @@ $link-shadow: rgba(16, 24, 40, 0.05);
             text-align: center;
         }
     }
-
+    
 }
 
 @media screen and (max-width: 700px) {
-    .footer__info {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1.8em;
+    .App{
+        .footer__info {
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 1.8em;
+            
+            .footer__text {
+                display: inline;
+                width: 100%;
+                text-align: left;
+            }
+        }
     }
 }
 @media screen and (max-width: 600px) {
