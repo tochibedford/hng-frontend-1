@@ -10,12 +10,12 @@ export default function Contact() {
         privacy_agreement: false
     })
 
-    const handleInputChange = (event)=>{
+    const handleInputChange = (event) => {
         const target = event.target
         const value = target.type === 'checkbox' ? target.checked : target.value
         const name = target.name
 
-        setFormInputs(prevState=>{
+        setFormInputs(prevState => {
             return {
                 ...prevState,
                 [name]: value
@@ -27,6 +27,7 @@ export default function Contact() {
         const target = event.target
         target.classList.add(styles.visited)
     }
+    
     return (
         <>
             <header role="heading" className={styles.page__title__container}>
@@ -38,23 +39,27 @@ export default function Contact() {
                     <div className={styles.form__name}>
                         <label htmlFor="first_name" className={styles.input__tip}>
                             First name
-                            <input id="first_name" value={formInputs.first_name} onChange={handleInputChange} type="text" placeholder='Enter your first name' name="first_name" required onBlur={handleBlur}/>
+                            <input id="first_name" value={formInputs.first_name} onChange={handleInputChange} type="text" placeholder='Enter your first name' name="first_name" required onBlur={handleBlur} />
+                            <span className={styles.error__tip}>Please enter your first name</span>
                         </label>
                         <label htmlFor="last_name" className={styles.input__tip}>
                             Last name
-                            <input id="last_name" value={formInputs.last_name} onChange={handleInputChange} type="text" placeholder='Enter your last name' name="last_name" required onBlur={handleBlur}/>
+                            <input id="last_name" value={formInputs.last_name} onChange={handleInputChange} type="text" placeholder='Enter your last name' name="last_name" required onBlur={handleBlur} />
+                            <span className={styles.error__tip}>Please enter your last name</span>
                         </label>
                     </div>
                     <label htmlFor="email" className={styles.input__tip}>
                         Email
-                        <input id="email" value={formInputs.email} onChange={handleInputChange} type="email" placeholder='yourname@email.com' name="email" required onBlur={handleBlur}/>
+                        <input id="email" value={formInputs.email} onChange={handleInputChange} type="email" placeholder='yourname@email.com' name="email" required onBlur={handleBlur} />
+                        <span className={styles.error__tip}>Please enter a valid email</span>
                     </label>
                     <label htmlFor="message" className={styles.input__tip}>
                         Message
-                        <textarea id="message"   value={formInputs.message} onChange={handleInputChange} name="message" rows={4} placeholder="Send me a message and I'll reply you as soon as possible..." required onBlur={handleBlur}></textarea>
+                        <textarea id="message" value={formInputs.message} onChange={handleInputChange} name="message" rows={4} placeholder="Send me a message and I'll reply you as soon as possible..." required onBlur={handleBlur}></textarea>
+                        <span className={styles.error__tip}>The message cannot be empty</span>
                     </label>
                     <label htmlFor='privacy_agreement'>
-                        <input value={formInputs.privacy_agreement} onChange={handleInputChange} type="checkbox" name="privacy_agreement" />
+                        <input value={formInputs.privacy_agreement} onChange={handleInputChange} type="checkbox" name="privacy_agreement" required />
                         <span className={styles.checkmark}></span>
                         You agree to providing your data to Tochukwu Bedford who may contact you.
                     </label>
